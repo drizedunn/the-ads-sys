@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Details | Ecommerce Ads</title>
+    </head>
+    <style>
+        body{
+            background-color: rgb(12, 12, 80);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .ff{
+            justify-content: center;
+            text-align: center;
+            color: #f3f3fa;
+            font-size: 1.9rem;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            height: 900px;
+            width: 490px;
+            /* border: 1px solid black; */
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+
+        .form h2{
+            color: white;
+            font-size: 1.9rem;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+            margin: 30px;
+        }
+
+        .box{
+            padding: 12px;
+            margin: 10px;
+            width: 70%;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            border: none; 
+
+        }
+
+        .boxx{
+            padding: 12px;
+            margin: 10px;
+            width: 66.8%;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            border: none; 
+
+        }
+
+        #submit{
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+
+
+
+        #submit:hover{
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+
+     
+        ::placeholder{
+            color: white;
+        }
+
+
+    </style>    
+
+    </head>
+
+    <body>
+        <form class="form" action="{{ url_for('your_ads')}}" method="post"> 
+
+            <h2>User Details</h2>
+
+                    <input name="user_id" class="boxx" placeholder="~Your User ID(9 unique numbers)~" required>
+
+					<select name="category" class="box" required>
+                        <option value=" ">~Product Category~</option>
+                        <option value=1>Smartphone</option>
+                        <option value=0>Computer</option>
+					</select>
+
+                    <input name="price" class="boxx" placeholder="~Product Price(U.S.D)~" required>
+                    
+                    <select name="event_type" class="box" required>
+                        <option value=" ">~Select Action~</option>
+                        <option value=2>Purchase</option>
+                        <option value=1>Cart</option>
+                        <option value=0>View</option>
+					</select>
+
+                    <input name="activity_count" class="boxx" placeholder="~No Of Activity~" required>
+                   
+                    <select name="day" class="box" required>
+                        <option value=" ">~Week Day~</option>  <option value=1>Sunday</option>  
+                        <option value=2>Monday</option>
+                        <option value=3>Tuesday</option>    
+                        <option value=4>Wednessday</option>   
+                        <option value=5>Thursday</option>      
+                        <option value=6>Friday</option>
+                        <option value=0>Saturday</option>
+					</select>
+
+                    <input name="income" class="boxx" placeholder="~Income~" required>
+
+                    <select name="marriage_status" class="box" required>
+                        <option value=" ">~Marriage Status~</option>
+                        <option value=1>Married</option>
+                        <option value=0>Single</option>
+					</select>
+
+                    <select name="profession" class="box" required>
+                        <option value=" ">~Profession~</option>  
+                        <option value=0>Physician</option>                <option value=18>Hotel Manager</option>
+                        <option value=1>Statistician</option>             <option value=19>Secretary</option>
+                        <option value=2>Graphic Designer</option>         <option value=20>Financial Analyst</option>
+                        <option value=3>Web Designer</option>             <option value=21>Flight Attendant</option>
+                        <option value=4>Psychologist</option>             <option value=7>Software Developer</option>                       
+                        <option value=17>Technical Writer</option>        <option value=6>Computer Hardware Engineer</option> 
+                        <option value=16>Chemical Engineer</option>       <option value=11>Biomedical Engineer</option>
+                        <option value=12>Air Traffic Controller</option>  <option value=8>Drafter</option>   
+                        <option value=13>Comedian</option>                <option value=9>Magistrate</option>   
+                        <option value=14>Industrial Engineer</option>     <option value=10>Fashion Designer</option>   
+                        <option value=15>Mechanical Engineer</option>     <option value=5>Others</option>                          
+					</select>
+
+                    <input name="age" class="boxx" placeholder="~Age~" required>
+
+                    <select name="country" class="box" required>
+                        <option value=" ">~Country~</option>  
+                        <option value=0>China</option>           <option value=13>Norway</option>
+                        <option value=1>Germany</option>         <option value=14>India</option>
+                        <option value=2>Italy</option>           <option value=15>Uttarakhand</option>
+                        <option value=3>Sweden</option>          <option value=16>Korea</option>
+                        <option value=4>Canada</option>          <option value=17>Austria</option>                       
+                        <option value=5>Mexico</option>          <option value=18>South Korea</option> 
+                        <option value=6>Japan</option>           <option value=19>Others</option>
+                        <option value=7>USA</option>             <option value=20>Saudi Arabia</option>   
+                        <option value=8>France</option>          <option value=21>Indonesia</option>   
+                        <option value=9>Spain</option>           <option value=22>Turkey</option>   
+                        <option value=10>Russia</option>          
+                        <option value=11>Denmark</option>
+                        <option value=12>UK</option>                        
+					</select>
+
+
+            <button id="submit" type="submit">See Personalized Products</button>
+
+        </form>
+        <!-- <span style="font-weight:bold;font-size:1.5em;text-align: center;justify-content: center;color: #ffffff">{{ prediction_text }}</span> -->
+  
+    </body>
+</html>
