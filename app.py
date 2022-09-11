@@ -4,18 +4,18 @@ from joblib import load
 import sklearn
 
 # Create flask app
-flask_app = Flask(__name__)
+app = Flask(__name__)
 model = load("model.joblib")
 
-@flask_app.route("/")
+@app.route("/")
 def index():
     return render_template("index.html")
 
-@flask_app.route("/form")
+@app.route("/form")
 def form():
     return render_template("forms.html")
 
-@flask_app.route("/your_ads", methods = ["POST"])
+@app.route("/your_ads", methods = ["POST"])
 def your_ads():
     user_id = request.form.get('user_id')
     category = request.form.get('category')
@@ -46,4 +46,4 @@ def your_ads():
 
 
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    app.run(debug=True)
