@@ -1,2 +1,2 @@
-Flask deployment of the adssssssssss project
+Flask deployment of the ads project
 
